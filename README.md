@@ -22,6 +22,8 @@ A documented toolkit based on PowerShell functions and built-in cmdlets for:
 
 ## Evidence from the academic project
 
+[→ View evidence](evidence/)
+
 The source material includes tested functions such as `Show-SystemIdentity` and `Show-ProcessMonitor`, with documented expected output and test results.
 
 ## Why it matters for DevSecOps
