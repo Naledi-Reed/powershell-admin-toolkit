@@ -1,14 +1,18 @@
-# Windows PowerShell Administration Toolkit
+<div align="center">
 
-A runnable, menu-driven PowerShell toolkit for common Windows administration, monitoring and reporting tasks.
+# ⚡ Windows PowerShell Administration Toolkit
 
-**Status:** Working portfolio project  
-**Module origin:** OPS262 - Operating Systems  
-**Safety:** The public toolkit is read-only. It inspects and reports system information without changing users, services or security settings.
+**A runnable, menu-driven toolkit for Windows administration and reporting**
+
+[![Source](https://img.shields.io/badge/OPEN_COMPLETE_SCRIPT-B6FF00?style=for-the-badge&logo=powershell&logoColor=07110D)](src/Windows-Admin-Toolkit.ps1)
+[![Evidence](https://img.shields.io/badge/VIEW_TEST_EVIDENCE-101820?style=for-the-badge&logo=windows&logoColor=B6FF00)](evidence/)
+[![Download](https://img.shields.io/badge/DOWNLOAD_COMPLETE_PROJECT-B6FF00?style=for-the-badge&logo=github&logoColor=07110D)](https://github.com/Naledi-Reed/powershell-admin-toolkit/archive/refs/heads/main.zip)
+
+</div>
 
 ## What is included
 
-The script provides ten menu options:
+The complete PowerShell script provides:
 
 1. System identity and operating-system information
 2. Top processes by CPU usage
@@ -21,11 +25,21 @@ The script provides ten menu options:
 9. JSON system-report export
 10. Command discovery and help
 
-## Run the project
+## Actual project files
 
-1. Download or clone this repository.
-2. Open **Windows PowerShell 5.1 or PowerShell 7**.
-3. Change to the repository folder.
+| File | Purpose |
+|---|---|
+| [Windows-Admin-Toolkit.ps1](src/Windows-Admin-Toolkit.ps1) | Complete runnable toolkit |
+| [architecture.svg](docs/architecture.svg) | System architecture |
+| [implementation-notes.md](docs/implementation-notes.md) | Technical implementation notes |
+| [evidence/](evidence/) | Execution and source evidence |
+| [evidence/README.md](evidence/README.md) | Evidence index |
+
+## Run the toolkit
+
+1. Download the repository ZIP or clone it.
+2. Open Windows PowerShell 5.1 or PowerShell 7.
+3. Change to the downloaded repository directory.
 4. Run:
 
 ```powershell
@@ -33,46 +47,15 @@ Set-ExecutionPolicy -Scope Process Bypass
 .\src\Windows-Admin-Toolkit.ps1
 ```
 
-Some functions such as local account and event-log inspection may provide more information when PowerShell is opened as Administrator.
+Some functions may provide more detail when PowerShell is opened as Administrator.
 
-## Source code
+## Safety
 
-[Open the complete PowerShell toolkit](src/Windows-Admin-Toolkit.ps1)
-
-## Evidence
-
-[View screenshots and test evidence](evidence/)
-
-The evidence includes the menu running live, the process-monitor function, system-summary output and file-extension search results.
-
-## Architecture
-
-```text
-Menu
-  |
-  +-- System and operating-system checks
-  +-- Process and service monitoring
-  +-- Network and disk reporting
-  +-- Local account and event-log inspection
-  +-- File search and JSON export
-```
+The public toolkit is read-only. It inspects and reports information without creating users, changing services or modifying security settings.
 
 ## Skills demonstrated
 
-- Reusable PowerShell functions
-- Windows system administration
-- CIM and built-in cmdlets
-- Validation and error handling
-- Structured objects and JSON output
-- Monitoring and technical documentation
+Reusable functions • Windows administration • CIM cmdlets • validation • error handling • structured objects • JSON output • monitoring • documentation
 
-## Development roadmap
-
-- Add Pester unit tests
-- Add optional CSV and HTML reports
-- Add remote-computer support
-- Add GitHub Actions syntax validation
-
-## Academic context
-
-This is a cleaned public portfolio edition based on practical work completed at Belgium Campus iTversity in 2026. Private academic records and unredacted assessment material are not published.
+**Module origin:** OPS262 — Operating Systems  
+**Status:** Working portfolio project with complete source, documentation and evidence
