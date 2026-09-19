@@ -1,47 +1,78 @@
-# Windows PowerShell System Administration Toolkit
+# Windows PowerShell Administration Toolkit
 
-**Module:** OPS262 - Operating Systems 262  
-**Focus:** PowerShell, system administration, monitoring and automation
+A runnable, menu-driven PowerShell toolkit for common Windows administration, monitoring and reporting tasks.
 
-## The problem
+**Status:** Working portfolio project  
+**Module origin:** OPS262 - Operating Systems  
+**Safety:** The public toolkit is read-only. It inspects and reports system information without changing users, services or security settings.
 
-Manual Windows administration becomes repetitive as the number of supported computers grows. This project explored how PowerShell can turn common administration tasks into repeatable commands and functions.
+## What is included
 
-## What I built
+The script provides ten menu options:
 
-A documented toolkit based on PowerShell functions and built-in cmdlets for:
+1. System identity and operating-system information
+2. Top processes by CPU usage
+3. Service status and stopped automatic services
+4. IP, gateway and DNS configuration
+5. Disk capacity and free space
+6. Local user-account summary
+7. Recursive file-extension search
+8. Recent System log warnings and errors
+9. JSON system-report export
+10. Command discovery and help
 
-- System identity and operating-system information
-- Process monitoring
-- Service and system checks
-- User and file-system information
-- Input and path validation
-- Command discovery with `Get-Command`
-- Built-in help with `Get-Help`
-- Structured output and reusable functions
+## Run the project
 
-## Evidence from the academic project
+1. Download or clone this repository.
+2. Open **Windows PowerShell 5.1 or PowerShell 7**.
+3. Change to the repository folder.
+4. Run:
 
-[→ View evidence](evidence/)
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\src\Windows-Admin-Toolkit.ps1
+```
 
-The source material includes tested functions such as `Show-SystemIdentity` and `Show-ProcessMonitor`, with documented expected output and test results.
+Some functions such as local account and event-log inspection may provide more information when PowerShell is opened as Administrator.
 
-## Why it matters for DevSecOps
+## Source code
 
-This is the beginning of an important engineering habit: replacing repeated manual actions with scripts that are understandable, testable and reusable.
+[Open the complete PowerShell toolkit](src/Windows-Admin-Toolkit.ps1)
 
-## Portfolio upgrade path
+## Evidence
 
-Future versions can turn the academic toolkit into a standalone administration project with:
+[View screenshots and test evidence](evidence/)
 
-1. Error handling and logging
-2. Parameterised functions
-3. Exportable reports
-4. Remote administration
-5. Pester tests
-6. Security-focused checks
-7. GitHub Actions validation
+The evidence includes the menu running live, the process-monitor function, system-summary output and file-extension search results.
+
+## Architecture
+
+```text
+Menu
+  |
+  +-- System and operating-system checks
+  +-- Process and service monitoring
+  +-- Network and disk reporting
+  +-- Local account and event-log inspection
+  +-- File search and JSON export
+```
+
+## Skills demonstrated
+
+- Reusable PowerShell functions
+- Windows system administration
+- CIM and built-in cmdlets
+- Validation and error handling
+- Structured objects and JSON output
+- Monitoring and technical documentation
+
+## Development roadmap
+
+- Add Pester unit tests
+- Add optional CSV and HTML reports
+- Add remote-computer support
+- Add GitHub Actions syntax validation
 
 ## Academic context
 
-Belgium Campus iTversity - 2026. This repository contains a portfolio summary; the original assessment document remains in the private academic archive.
+This is a cleaned public portfolio edition based on practical work completed at Belgium Campus iTversity in 2026. Private academic records and unredacted assessment material are not published.
